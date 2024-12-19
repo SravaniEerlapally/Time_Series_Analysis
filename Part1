@@ -1,0 +1,75 @@
+1.What is Time Series Data?
+A) Observations collected over a time intervals i.e monthly, weekly, daily, seconds.
+     Eg: Stock data, sales data, weather data, social media activity
+ CHARACTERISTICS:
+ ==> Chronological Order (regular intervals)
+ ==> Sequential Order (cuurent obs depends on past )
+ ==> Temporal Components ( trend, seasonality, cycle, noise)
+ ==> Constant Frequency (continuous data without any missing value)
+ ==> Dynamic Nature (affected by external factors)
+ BEFORE PERFORMING TSA, these all should satisfy if not we need to change.
+
+2.TIME SERIES ANALAYSIS
+   - Its a statistical technique i.e used to extract meaningful insights about patterns and trends.
+ Steps in TSA:
+  i) Understand the past data
+ ii) Forecating Future
+Charts we prefer are Line Chart and Candle stick Chart[For Stocks(in 1 chart high,low, open,close)]
+To compare with other data with same domain , unit we can plot in same and compare with multiple lines
+
+3.TIME SERIES DECOMPOSITION
+   ->Trend: Long Term Direction of Data [/Upward][\Downward]
+   ->Seasonaity: Repeating patterns(similar) in fixed intervals
+   ->Cycle(not fixed)
+       ::>Economic
+       ::>Business
+   ->Residual (Noise): Sudden or random fluctuation
+
+4.Types Of Decomposition
+         --->1.Additive yt = Tt+St+Rt
+         --->2.Multiplicative yt = Tt*St*Rt
+
+ STL(Seasonal & Trend) Decomposition using LOESS(Locally Estimated Scatterplot Smoothening)
+   - best method to handle outliers in time series data
+   key diff
+   Classical Decomposition                                                           STL Decompositon
+  - fixed seasonal pattern                                     - variety seasonal pattern
+  - easily influenced by outliers                              - handles outliers
+  - handle both additive & multiplicative timeseries data      - only handle additive timeseries data
+
+:: When TSD is based on additive model we use STL Decomposition , or if its based multiplicative we use CLASSICAL Decomposition
+
+5.Stationarity
+  If Mean, Variance, Auto-Correlation of any time series data are constant.
+  Constant Mean i.e No trend
+
+Q) Why do we need stationarity in TSD>
+A) Helps in future forecasting easier because it assumes same statistical properties through the time.
+   Forecasting models requires a stationary data
+  Types Of Stationarity
+     i) Weak Stationarity
+          Constant mean, variance, auto-correlation.
+          Joint Distribution can change.
+        Use Case: For different Forecating model picking shorter period of data
+    ii) Strict Stationarity
+           Exhibits the properties of Weak Stationarity.
+           Joint Distribution remains unchanged when shifted along any time period. 
+          Use Case: Modelling entire distribution of data such that forecasting will be closure to actual values.
+
+6.Testing For Stationarity
+  i)Weak
+     -ADF Test
+     -KPSS Test
+
+
+
+
+
+
+
+
+
+
+
+
+    
