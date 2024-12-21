@@ -59,7 +59,74 @@ A) Helps in future forecasting easier because it assumes same statistical proper
 6.Testing For Stationarity
   i)Weak
      -ADF Test
+        If Timeseries data has unit root 
+        [unit root means non-stationary trend ]
+     H0: data has unit root(non-stationary trend)
+     H1: data not has unit root(stationary trend)
+     Decision : If p<0.05 ->stationary (strong evidence against null hyp) we accept Alt hypothesis.
+                If ADF Statistic<critical value, we reject the null hypothesis.
+
      -KPSS Test
+        Fits a constant mean model on the data
+        It measures the variation of the cumulative sum of residual
+      H0: stationary trend
+      H1: non-stationary trend
+     Decision : If p<0.05 ->non-stationary (strong evidence against null hyp) we accept Alt hypothesis.
+                If KPSS Statistic>critical value, we reject the null hypothesis.
+   After these 2tests you get then it is stationary.
+
+  ii)Strict 
+    to test 1st we check week or not bcoz it must follow week statioary criteria, once done we'll check other test
+      -KS Test(Kolmogorov Simrnov Test)
+        Compare the cumulative distribution functions of 2samples
+       Decision : If p>0.05, no diff in distribution 
+
+7.Making TimeSeries Data From Non-Stationary to Stationary
+ There are 4 methods:
+ i)Differencing:
+    yt = current value
+    yt-1 = past observed value
+    1st order Difference yt`= yt-yt-1
+    2nd order Difference yt``= yt`-yt`-1
+ii)Transformation
+     -it stabilizes the variance of time series data
+   1. Logarithmic - log of data
+   2. Power - sqroot yt/ sqroot yt-1
+   3. Box-Cox(always +ve) - Combination of Power & Logarthmic
+iii)Detrending
+      -removing trend component
+  1. Linear Detrending
+  2. Moving Average Detrending (window size moving)
+  3. Seasonality Adjustment : removing seasonal component
+        STL decomposition
+
+8.WHITE NOISE & RANDOM WALK
+ 1) WHITE NOISE: no pattern, trend, or seasonality
+    properties:
+     ->same mean, const variance , no auto-correlation
+Whenever you get white noise timesseries data i.e completely random and we should not move forward , we can't prdeict.
+
+ 2) Random Walk: cumulative pattern
+     yt = yt-1 + et (where et=white noise)
+     it is predictable
+     eg: stock price
+    Properties:
+     -> means & variance change overtime
+     -> Random walk is a completely non-stationary data ,1st diff is stationary
+         we predict only after differentiation before that it is non-predictable as it is non-stationary data
+     -> no predictable pattern
+
+9. Identifying WHITE NOISE & RANDOM WALK
+   i)By Visually(checking the mean, variance , auto-correlation in plots)
+   ii)ACF & PACF Plot(choose the order of the model & predict white noise/random)
+   iii)Ljung Box Test(used to check auto-correlation)
+        if p<0.05 random walk or else white noise
+        H0: no auto-correlation, H1: auto-correlation
+
+
+
+
+  
 
 
 
