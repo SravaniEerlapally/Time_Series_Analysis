@@ -1,0 +1,75 @@
+Time Series Forecasting Model
+
+UNIVARIATE MODELS
+1.AutoRegressive Model(AR Model)
+   - uses past values of TSD and predicts future
+   - order of AR model denoted by 'p'
+      AR(1), AR(2) i.e AR(p)
+     p = no.of lagged(past) observations
+     AR(p) yt = c + φyt-1 + φyt-2 + ...... φyt-p + et 
+           (et=white noise,c=constant,φ=parameter of model,yt-1,yt-2=past values)
+     AR(2) = c+φ1yt-1+φ2yt-2
+     AR(1) = c+φ1yt-1
+
+2.Moving Average(MA) Model
+   - uses the past error terms (residual) and predicts future
+   - order of MA model denoted by 'q'
+       q = no.of lagged error terms
+       yt = Et + θ1Et-1 +θ2Et-2 + ......+θqEt-q
+
+3.AutoRegressive Moving Average Model(ARMA)
+  - combines AR & MA model for forecating
+  - captures both temporal dependencies & error terms
+  - order(p,q)
+   ARMA(p,q)
+     yt = φyt-1 + φyt-2 + ...... φyt-p + θ1Et-1 +θ2Et-2 + ......+θqEt-q 
+
+4.AutoRegressive Integrated Moving Average Model(ARIMA)
+  - integarting involves differentiating order
+  - ARIMA (p,d,q)
+    ARIMA(1,1,1)
+    AR(1)
+    differentiating order = 1st order
+    MA(1)
+    Δyt = φ1Δyt-1 + φ2Δyt-2 + ...... φpΔyt-p + Et + θ1Et-1 +θ2Et-2 + ......+θqEt-q
+
+5.Seasonaility AutoRegressive Integrated Moving Average Model(SARIMA)
+    - SARIMA(p,d,q)(P,D,Q)m
+               |       |    \_ period
+      order of ARIMA   order of seasonal part  
+
+MULTIVARIATE MODELS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
