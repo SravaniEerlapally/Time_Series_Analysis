@@ -20,9 +20,9 @@ To compare with other data with same domain , unit we can plot in same and compa
 3.TIME SERIES DECOMPOSITION
    ->Trend: Long Term Direction of Data [/Upward][\Downward]
    ->Seasonaity: Repeating patterns(similar) in fixed intervals
-   ->Cycle(not fixed)
-       ::>Economic
-       ::>Business
+   ->Cyclic(not fixed):Cyclic is a fluctuation that occurs in data that is not related to seasonality.
+                      Cycles are usually longer than seasonal and difficult to predict because they are irregular.
+                      Cyclicity can be caused by economic, political, or social factors that influence the data.
    ->Residual (Noise): Sudden or random fluctuation
 
 4.Types Of Decomposition
