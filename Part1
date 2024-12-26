@@ -27,7 +27,12 @@ To compare with other data with same domain , unit we can plot in same and compa
 
 4.Types Of Decomposition
          --->1.Additive yt = Tt+St+Rt
+                when the seasonal variation is relatively constant over time
+                Parallel, seasonilty decreases trend increases
+
          --->2.Multiplicative yt = Tt*St*Rt
+                when the seasonal variation increases over time.
+                proportional, seasonaility increases trend increases
 
  STL(Seasonal & Trend) Decomposition using LOESS(Locally Estimated Scatterplot Smoothening)
    - best method to handle outliers in time series data
